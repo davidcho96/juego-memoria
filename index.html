@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="tablero">
+            <div class="item" v-for="item in game" :key="item.id">
+                <div class=" oculto" :data-value="item.value" v-show="!item.state" @click="girarCarta(item.id, item.value)">
+                    <h1>DMC</h1>
+                </div>
+                <img :src="item.link" class="img">
+            </div>
+        </div>
+        <div class="puntajes">
+            <h2>Intentos: <b>{{intentos}}</b></h2>
+            <h2>Aciertos: <b>{{puntos}}</b></h2>
+            <button @click="reiniciar()">
+                Reiniciar
+            </button>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

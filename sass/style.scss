@@ -1,0 +1,74 @@
+$font:'Roboto',
+sans-serif;
+
+.img {
+    height: 200px;
+    width: 200px
+}
+
+.tablero {
+    height: 500px;
+    width: 620px;
+    border-radius: 10px;
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+
+    .item {
+        width: 110px;
+        height: 110px;
+        border-radius: 50%;
+        background: white;
+        position: relative;
+
+        .img {
+            height: 100%;
+            width: 100%;
+            border-radius: 50%;
+        }
+
+        .oculto {
+            font-family: 'Shrikhand', cursive;
+            height: 100%;
+            width: 100%;
+            background-color: #082b63;
+            position: absolute;
+            z-index: 1000;
+            border-radius: 50%;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .show {
+            z-index: 0;
+        }
+    }
+}
+
+.puntajes {
+    font-family: $font;
+    width: 620px;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    display: flex;
+    margin-top: 15px;
+    justify-content: space-around;
+    align-content: center;
+}
+
+button {
+    border-style: none;
+    height: 40px;
+    width: 100px;
+    font-size: 18px;
+    cursor: pointer;
+    color: white;
+    background-color: red;
+    margin-top: auto;
+    margin-bottom: auto;
+}
